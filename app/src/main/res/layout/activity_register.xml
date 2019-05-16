@@ -51,7 +51,7 @@
             android:background="@drawable/buttonstyle"
             android:hint="username"
             android:padding="16dp"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textColorHint="#fff" />
 
         <EditText
@@ -63,7 +63,7 @@
             android:hint="email"
             android:inputType="textEmailAddress"
             android:padding="16dp"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textColorHint="#fff" />
 
         <EditText
@@ -75,7 +75,7 @@
             android:hint="password"
             android:inputType="textPassword"
             android:padding="16dp"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textColorHint="#fff" />
 
         <Button
