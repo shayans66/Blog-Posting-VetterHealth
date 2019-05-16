@@ -12,10 +12,10 @@
         android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/post_image"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:id="@+id/post_image"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerInside" />
 
         <TextView
             android:id="@+id/post_title_txtview"
@@ -38,12 +38,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Kenny"
-            android:textSize="15sp"
             android:fontFamily="serif"
             android:gravity="end"
-            android:textStyle="bold"
-            android:textColor="#FF07B618"/>
+            android:text="Kenny"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
 
 

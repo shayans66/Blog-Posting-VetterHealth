@@ -6,16 +6,27 @@
     android:layout_margin="10dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.shs.vetterhealth.blogzone.ProfileActivity">
+    tools:context="com.shs.vetterhealth.blogzone.ProfileActivity"
+    android:background="#212121">
 
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add an Image"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <ImageButton
         android:id="@+id/imagebutton"
         android:layout_width="250dp"
         android:layout_height="200dp"
         android:layout_gravity="center"
-        android:scaleType="centerCrop"
-        />
+        android:background="@drawable/add_img"
+        android:scaleType="centerInside" />
 
     <EditText
 
@@ -25,7 +36,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="Enter Display name"/>
+        android:hint="Enter Display name"
+        android:textColorHint="#fff"/>
 
     <Button
         android:layout_marginTop="10dp"

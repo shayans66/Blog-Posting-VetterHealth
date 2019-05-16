@@ -5,82 +5,99 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bgg"
+    android:background="#212121"
     android:layout_height="match_parent"
     tools:context="com.shs.vetterhealth.blogzone.RegisterActivity">
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="10dp"
-        android:layout_centerVertical="true"
-        android:background="@drawable/layoutstyle"
-        android:layout_centerHorizontal="true">
+        android:layout_width="371dp"
+        android:layout_height="657dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="299dp"
+            android:layout_height="189dp"
+            android:layout_gravity="center_horizontal"
+
+
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/vetterlogo" />
 
         <TextView
-            android:layout_gravity="center"
-            android:layout_margin="16dp"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            android:textColor="#fff"
-            android:fontFamily="serif"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Register"/>
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:fontFamily="serif"
+            android:text="--Register--"
+            android:textColor="#fff"
+            android:textSize="32sp"
+            android:textStyle="bold" />
 
         <EditText
-            android:background="@drawable/buttonstyle"
-            android:layout_margin="8dp"
             android:id="@+id/usernameField"
-            android:padding="16dp"
-            android:textColor="#000"
-            android:hint="username"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <EditText
-            android:background="@drawable/buttonstyle"
+            android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:id="@+id/emailField"
+            android:background="@drawable/buttonstyle"
+            android:hint="username"
             android:padding="16dp"
-            android:inputType="textEmailAddress"
             android:textColor="#000"
-            android:hint="email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textColorHint="#fff" />
 
         <EditText
-            android:padding="16dp"
-            android:background="@drawable/buttonstyle"
-            android:layout_margin="8dp"
-            android:id="@+id/passwordField"
-            android:textColor="#000"
-            android:inputType="textPassword"
+            android:id="@+id/emailField"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/buttonstyle"
+            android:hint="email"
+            android:inputType="textEmailAddress"
+            android:padding="16dp"
+            android:textColor="#000"
+            android:textColorHint="#fff" />
+
+        <EditText
+            android:id="@+id/passwordField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/buttonstyle"
             android:hint="password"
-            android:layout_height="wrap_content" />
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textColor="#000"
+            android:textColorHint="#fff" />
 
         <Button
             android:id="@+id/registerBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="Register"
-            android:textColor="#fff"
             android:background="@drawable/action_button_style"
-            android:layout_gravity="center"/>
+            android:text="Register"
+            android:textColor="#fff" />
 
         <TextView
             android:id="@+id/loginTxtView"
-            android:layout_gravity="center"
-            android:layout_margin="16dp"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="#fff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="already registered ? Login"/>
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:text="already registered ? Login"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

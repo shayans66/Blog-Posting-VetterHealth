@@ -12,10 +12,10 @@
     tools:context="com.shs.vetterhealth.blogzone.SinglePostActivity">
 
     <ImageView
+        android:id="@+id/singleImageview"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:scaleType="centerCrop"
-        android:id="@+id/singleImageview"/>
+        android:scaleType="centerInside" />
 
     <TextView
         android:layout_marginTop="10dp"
