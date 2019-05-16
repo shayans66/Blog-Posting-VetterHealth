@@ -36,11 +36,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:background="@drawable/buttonstyle"
+            android:fontFamily="@font/quicksand_medium"
             android:hint="Enter Email"
-            android:textColorHint="#fff"
             android:inputType="textEmailAddress"
             android:padding="16dp"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textColorHint="#fff" />
 
         <EditText
             android:id="@+id/login_password"
@@ -48,11 +49,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:background="@drawable/buttonstyle"
+            android:fontFamily="@font/quicksand_medium"
             android:hint="Enter Password"
-            android:textColorHint="#FFF"
             android:inputType="textPassword"
             android:padding="16dp"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textColorHint="#FFF" />/>
 
         <Button
             android:id="@+id/loginBtn"
@@ -61,6 +63,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/action_button_style"
+            android:fontFamily="@font/quicksand_medium"
             android:text="Login"
             android:textColor="#fff" />
 
@@ -70,6 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="16dp"
+            android:fontFamily="@font/quicksand_medium"
             android:text="No Account ? Sign up"
             android:textColor="#fff"
             android:textSize="16sp"

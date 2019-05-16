@@ -22,23 +22,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="Post Title"
             android:textColor="#000"
-            android:textStyle="bold"
-            android:text="Post Title"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/post_desc_txtview"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="5dp"
-            android:text="Post Description"/>
+            android:fontFamily="@font/quicksand_medium"
+            android:text="Post Description" />
 
         <TextView
             android:id="@+id/post_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:fontFamily="serif"
+            android:fontFamily="@font/quicksand_medium"
             android:gravity="end"
             android:text="Kenny"
             android:textColor="#000000"

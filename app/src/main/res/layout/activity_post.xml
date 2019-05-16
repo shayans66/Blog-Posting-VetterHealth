@@ -22,20 +22,22 @@
             android:scaleType="centerInside"
 
             />
-    <EditText
-        android:layout_marginTop="20dp"
-        android:id="@+id/textTitle"
-        android:background="@drawable/edit_text_styles"
-        android:padding="10dp"
-        android:textColor="#fff"
-        android:textStyle="bold"
-        android:hint="Post Title"
-        android:textColorHint="#FFF"
 
-        android:layout_marginRight="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/textTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/edit_text_styles"
+            android:fontFamily="@font/quicksand_medium"
+
+            android:hint="Post Title"
+            android:padding="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#FFF"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/textDesc"
@@ -45,6 +47,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="5dp"
             android:background="@drawable/edit_text_styles"
+            android:fontFamily="@font/quicksand_medium"
             android:hint="Post Description"
             android:padding="10dp"
             android:textColor="#fff"
@@ -55,16 +58,17 @@
             android:layout_height="wrap_content" />
 
         <Button
-        android:layout_marginTop="30dp"
-        android:id="@+id/postBtn"
-        android:textColor="#fff"
-        android:textStyle="bold"
-        android:layout_marginRight="5dp"
-        android:layout_marginLeft="5dp"
-        android:background="@drawable/action_button_style"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Post"/>
+            android:id="@+id/postBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/action_button_style"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="Post"
+            android:textColor="#fff"
+            android:textStyle="bold" />
 
 </LinearLayout>
 </ScrollView>

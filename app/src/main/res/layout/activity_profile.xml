@@ -14,8 +14,9 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add an Image"
+        android:fontFamily="@font/quicksand_medium"
         android:gravity="center"
+        android:text="Add an Image"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -30,23 +31,30 @@
 
     <EditText
 
-        android:background="@drawable/buttonstyle"
-        android:padding="10dp"
         android:id="@+id/profUserName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/buttonstyle"
+        android:fontFamily="@font/quicksand_medium"
         android:hint="Enter Display name"
-        android:textColorHint="#fff"/>
+        android:padding="10dp"
+        android:textColorHint="#fff" />
 
     <Button
-        android:layout_marginTop="10dp"
-        android:background="@drawable/action_button_style"
-        android:textColor="#fff"
         android:id="@+id/doneBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/action_button_style"
+        android:fontFamily="@font/quicksand_medium"
         android:text="Finish"
-        />
+        android:textColor="#fff" />
 
 </LinearLayout>

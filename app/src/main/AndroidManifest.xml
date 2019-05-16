@@ -32,6 +32,10 @@
             android:theme="@style/Base.Theme.AppCompat" />
         <activity android:name="com.shs.vetterhealth.blogzone.SinglePostActivity"
             android:parentActivityName="com.shs.vetterhealth.blogzone.MainActivity"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
