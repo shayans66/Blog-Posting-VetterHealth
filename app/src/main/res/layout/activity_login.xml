@@ -22,13 +22,24 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="275dp"
-            android:layout_height="254dp"
+            android:layout_width="183dp"
+            android:layout_height="153dp"
             android:layout_gravity="center_horizontal"
 
 
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="0dp"
             app:srcCompat="@drawable/vetterlogo" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center_horizontal"
+            android:text="vetterHealth"
+            android:textColor="#91CE4A"
+            android:textSize="38dp" />
 
         <EditText
             android:id="@+id/login_email"
