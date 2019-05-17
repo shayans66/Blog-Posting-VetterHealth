@@ -2,8 +2,6 @@ package com.shs.vetterhealth.blogzone;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -11,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -73,14 +74,14 @@ public class PostActivity extends AppCompatActivity {
                 final String PostDesc = textDesc.getText().toString().trim();
                 // do a check for empty fields
                 if (!TextUtils.isEmpty(PostDesc) && !TextUtils.isEmpty(PostTitle) && (uri != null)){
-                    StorageReference filepath = storage.child("post_images").child(uri.getLastPathSegment());
+                    final StorageReference filepath = storage.child("post_images").child(uri.getLastPathSegment());
                     filepath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
                             @SuppressWarnings("VisibleForTests")
                             //getting the post image download url
-                            final Uri downloadUrl = taskSnapshot.getDownloadUrl();
+                            final Uri downloadUrl = taskSnapshot.getMetadata().getReference().getDownloadUrl().getResult();
                             Toast.makeText(getApplicationContext(), "Succesfully Uploaded", Toast.LENGTH_SHORT).show();
                             final DatabaseReference newPost = databaseRef.push();
                             //adding post contents to database reference

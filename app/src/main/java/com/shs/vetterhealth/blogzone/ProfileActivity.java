@@ -2,7 +2,6 @@ package com.shs.vetterhealth.blogzone;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -10,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -64,12 +65,17 @@ public class ProfileActivity extends AppCompatActivity {
                 final String userID = mAuth.getCurrentUser().getUid();
                 if (!TextUtils.isEmpty(name) && mImageUri != null){
 
-                    StorageReference filepath = mStorageRef.child(mImageUri.getLastPathSegment());
+                    final StorageReference filepath = mStorageRef.child(mImageUri.getLastPathSegment());
                     filepath.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            @SuppressWarnings("VisibleForTests")
-                            String downloadUrl = taskSnapshot.getDownloadUrl().toString();
+
+
+
+                            //Maybe doesn't work
+                            String downloadUrl = filepath.getDownloadUrl().toString();
+
+
                             mDatabaseUsers.child(userID).child("name").setValue(name);
                             mDatabaseUsers.child(userID).child("image").setValue(downloadUrl);
 
