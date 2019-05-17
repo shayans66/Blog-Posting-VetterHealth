@@ -28,6 +28,8 @@ public class LoginActivity extends AppCompatActivity {
     private DatabaseReference mDatabase;
     private Button loginBtn;
 
+    //
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
