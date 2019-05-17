@@ -85,7 +85,7 @@
             android:layout_gravity="center"
             android:layout_margin="16dp"
             android:fontFamily="@font/quicksand_medium"
-            android:text="No Account ? Sign up"
+            android:text="No Account? Sign up"
             android:textColor="#fff"
             android:textSize="16sp"
             android:textStyle="bold" />

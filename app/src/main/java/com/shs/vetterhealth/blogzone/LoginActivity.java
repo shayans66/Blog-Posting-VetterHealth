@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -27,6 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
     private Button loginBtn;
+    private TextView registerBtn;
 
     //
 
@@ -38,33 +40,37 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn = (Button)findViewById(R.id.loginBtn);
         loginEmail = (EditText)findViewById(R.id.login_email);
         loginPass = (EditText)findViewById(R.id.login_password);
+        registerBtn = findViewById(R.id.signUpTxtView);
 
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Users");
 
-        loginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(LoginActivity.this, "PROCESSING....", Toast.LENGTH_LONG).show();
-                String email = loginEmail.getText().toString().trim();
-                String password = loginPass.getText().toString().trim();
 
-                if (!TextUtils.isEmpty(email)&& !TextUtils.isEmpty(password)){
+        registerBtn.setOnClickListener(view -> {
+            Intent myIntent = new Intent(this, RegisterActivity.class);
 
-                    mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()){
-                                checkUserExistence();
-                            }else {
-                                Toast.makeText(LoginActivity.this, "Couldn't login, User not found", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
-                }else {
+            this.startActivity(myIntent);
+            finish();
 
-                    Toast.makeText(LoginActivity.this, "Complete all fields", Toast.LENGTH_SHORT).show();
-                }
+        });
+
+        loginBtn.setOnClickListener(view -> {
+            Toast.makeText(LoginActivity.this, "PROCESSING....", Toast.LENGTH_LONG).show();
+            String email = loginEmail.getText().toString().trim();
+            String password = loginPass.getText().toString().trim();
+
+            if (!TextUtils.isEmpty(email)&& !TextUtils.isEmpty(password)){
+
+                mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(task -> {
+                    if (task.isSuccessful()){
+                        checkUserExistence();
+                    }else {
+                        Toast.makeText(LoginActivity.this, "Couldn't login, User not found", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }else {
+
+                Toast.makeText(LoginActivity.this, "Complete all fields", Toast.LENGTH_SHORT).show();
             }
         });
     }
